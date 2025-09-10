@@ -1,0 +1,41 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Dashboard</h1>
+
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Eventos</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ event_count }}</h5>
+                    <p class="card-text">Total de eventos cadastrados.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-header">Gastos</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ expense_count }}</h5>
+                    <p class="card-text">Total de gastos registrados.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-header">Tarefas</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ task_count }}</h5>
+                    <p class="card-text">Tarefas pendentes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

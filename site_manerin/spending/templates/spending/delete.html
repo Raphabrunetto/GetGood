@@ -1,0 +1,12 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+<h2>🗑️ Excluir Gasto</h2>
+
+<p>Tem certeza que deseja excluir o gasto <strong>{{ expense.title }}</strong> (R$ {{ expense.amount }})?</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button class="btn btn-danger" type="submit">Sim, excluir</button>
+  <a class="btn btn-secondary" href="{% url 'spending_index' %}">Cancelar</a>
+</form>
+{% endblock %}
